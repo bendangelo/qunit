@@ -92,6 +92,8 @@ Test.prototype = {
 			teardown: function() {}
 		}, this.moduleTestEnvironment );
 
+		this.testEnvironment = extend(this.testEnvironment, config.environment);
+
 		runLoggingCallbacks( "testStart", QUnit, {
 			name: this.testName,
 			module: this.module

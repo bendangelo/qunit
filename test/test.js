@@ -240,6 +240,14 @@ module("simple testEnvironment setup", {
 	// example of meta-data
 	bugid: "#5311"
 });
+QUnit.config.environment = {
+	setting:10
+};
+
+test('config environment', function(){
+	equal(this.setting, QUnit.config.environment.setting);
+});
+
 test("scope check", function() {
 	deepEqual(this.foo, "bar");
 });
